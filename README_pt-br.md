@@ -114,6 +114,8 @@ __Análise da função [crackme.4013D8](ASM/crackme-4013D8.s):__
 
   Exibindo a janela com a mensagem de "sucesso".
 
+  ![b_GREATWORK_MATE!](b_GREATWORK_MATE!.png)
+
   # [KeyGen](keygen.py)
 
 
