@@ -66,7 +66,11 @@ __Debugging x32dbg__
   Portanto, é possível que alguma dessas chamadas de funções <JMP.&MessageBoxA> possa conter a janela com uma frase de "sucesso".
 
 __[0x0040135C | call <JMP.&MessageBoxA>](ASM/0040135C_messageBoxA.s)__
+
+
 __[0x00401378 | call <JMP.&MessageBoxA>](ASM/00401378_messageBoxA.s)__
+
+
 __[0x004013BC | call <JMP.&MessageBoxA>](ASM/004013BC_messageBoxA.s)__
 
   Analisando as 3 chamadas de função, podemos verificar que na chamada [0x0040135C | call <JMP.&MessageBoxA>](ASM/0040135C_messageBoxA.s), temos 4 argumentos empilhados antes da chamada da função e 2 dos argumentos, possuem uma mensagem de "sucesso".
