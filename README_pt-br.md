@@ -89,8 +89,10 @@ __[0x004013BC | call <JMP.&MessageBoxA>](ASM/004013BC_messageBoxA.s)__
 
   Analisando as instruções dentro do escopo da chamada função, temos:
 
-  [00401228 - 0040124C | instructions](ASM/crackme-401228.s) 
-  [validateInput.c](C/validateInput.c)
+  [00401228 - 0040124C | instructions](ASM/crackme-401228.s) - ASM
+
+
+  [validateInput.c](C/validateInput.c) - C (Pseudocódigo)
 
   Veja que nas linhas 00401228 e 00401233 temos 2 argumentos que são empilhados para a pilha (crackme.40218E, crackme.40217E) e logo em seguida, uma funçãom é chamada, provavelmente é uma funçãoq eu trabalha com o nome e a serial inseridos no programa.
 
@@ -104,11 +106,12 @@ __[0x004013BC | call <JMP.&MessageBoxA>](ASM/004013BC_messageBoxA.s)__
   Pseudocódigos: [nameXor.c](C/nameXor.c), [charCmp](C/charCmp.c) e [charSum](C/charSum.c)
 
 
-__Análise da função [crackme.4013D8](ASM/crackme.4013D8.s):__
+__Análise da função [crackme.4013D8](ASM/crackme-4013D8.s):__
 
   Nesta função, o programa converte uma string para o valor em formato inteiro e retorna este valor combinado com a operação XOR usando o valor hexadecimal (0x1234).
 
   Após a execução das 2 chamadas de função, o programa retorna para a função de validação da entrada e compara os valores presentes nos registradores $eax e $ebx, se forem iguais, um salto ocorre e o programa pula para a função crackme.40134D.
+
   Exibindo a janela com a mensagem de "sucesso".
 
   # [KeyGen](keygen.py)
