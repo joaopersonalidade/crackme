@@ -35,7 +35,7 @@ __Libraries and functions used by the program (that are interesting)__
 | ---------- | ---------------------------------------- |
 | USER32.dll |       GetDlgItemTextA, MessageBoxA       |
 
-__According to the documentation of Windows API, the functions mentioned above, have the following behavior: __
+__According to the documentation of Windows API, the functions mentioned above, have the following behavior__
 
 __[GetDlgItemTextA](https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getdlgitemtexta)__
 
