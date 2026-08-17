@@ -94,13 +94,15 @@ __[0x004013BC | call <JMP.&MessageBoxA>](ASM/004013BC_messageBoxA.s)__
 
   [validateInput.c](C/validateInput.c) - C (Pseudocódigo)
 
-  Veja que nas linhas 00401228 e 00401233 temos 2 argumentos que são empilhados para a pilha (crackme.40218E, crackme.40217E) e logo em seguida, uma funçãom é chamada, provavelmente é uma funçãoq eu trabalha com o nome e a serial inseridos no programa.
+  Veja que nas linhas 00401228 e 00401233 temos 2 argumentos que são empilhados para a pilha (crackme.40218E, crackme.40217E) e logo em seguida, uma funçãom é chamada, provavelmente é uma função que trabalha com o nome e a serial inseridos no programa.
 
  __Análise da função [crackme.40137E](ASM/crackme-40137E.s):__
 
-  Nesta função, ocorre um loop que verifica cada caractere da string, se for < 'A', encerra a execução da função. 
+  Nesta função, ocorre um loop que verifica cada caractere da string, se for < 'A', encerra a execução da função.
+   
   Se for >= 'Z', chama uma função que converte o caractere, subtraindo 0x20. 
-  	Por exemplo: se for uma letra minúscula ('c'), vai converter para a letra maiúscula.
+  Por exemplo: se for uma letra minúscula ('c'), vai converter para a letra maiúscula.
+
   Após percorrer a string, o programa faz uma chamada para uma função que retorna a soma dos caracteres da string e depois, a função principal retorna o resultado da operação XOR com a soma dos caracteres e o valor hexadecimal (0x5678).
   
   Pseudocódigos: [nameXor.c](C/nameXor.c), [charCmp](C/charCmp.c) e [charSum](C/charSum.c)
